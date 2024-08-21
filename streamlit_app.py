@@ -4,12 +4,12 @@ from transformers import AutoModel, AutoTokenizer
 from safetensors import safe_open
 
 # Load your safetensors model
-model_path = ""\\cfi-fsvr01\User_Folders\Goldamae.Bullock\Desktop\Personal Documents\model.safetensors""
+model_path = "\\cfi-fsvr01\User_Folders\Goldamae.Bullock\Desktop\Personal Documents\model.safetensors"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Example: Loading a model (adjust to your specific model architecture)
-tokenizer = AutoTokenizer.from_pretrained(""\\cfi-fsvr01\User_Folders\Goldamae.Bullock\Desktop\Personal Documents\model.safetensors"")
-model = AutoModel.from_pretrained(""\\cfi-fsvr01\User_Folders\Goldamae.Bullock\Desktop\Personal Documents\model.safetensors"")
+tokenizer = AutoTokenizer.from_pretrained("\\cfi-fsvr01\User_Folders\Goldamae.Bullock\Desktop\Personal Documents\model.safetensors")
+model = AutoModel.from_pretrained("\\cfi-fsvr01\User_Folders\Goldamae.Bullock\Desktop\Personal Documents\model.safetensors")
 model.load_state_dict(torch.load("\\cfi-fsvr01\User_Folders\Goldamae.Bullock\Desktop\Personal Documents\model.safetensors"))
 model.to(device)
 model.eval()
